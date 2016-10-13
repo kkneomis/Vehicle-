@@ -35,8 +35,8 @@ public abstract class Vehicle {
         seatCount = seats;
     }
     
-    abstract void run();
-    abstract void stop();
-    abstract void accelerate();
+    abstract String run();
+    abstract String stop();
+    abstract String accelerate();
     
 }

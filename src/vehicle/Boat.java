@@ -11,23 +11,26 @@ package vehicle;
  */
 public class Boat extends Vehicle {
 
+    private Captain captain;
+    
     public Boat(String name, int seats) {
         super(name, seats);
+        this.captain = new Captain("Lt. Dan");
     }
 
     @Override
-    public void run() {
-        System.out.println("Boat is now running on water");
+    public String run() {
+        return this.captain.getName() + " is steering " + this.getVehicleName();
     }
 
     @Override
-    public void stop() {
-        System.out.println("Stopping this boat");
+    public String stop() {
+        return ("Stopping this boat");
     }
 
     @Override
-    public void accelerate() {
-        System.out.println("I can go up to 50mph on water");
+    public String accelerate() {
+        return ("I can go up to 50mph on water");
     }
     
 }

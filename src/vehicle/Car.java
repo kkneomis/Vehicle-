@@ -11,23 +11,38 @@ package vehicle;
  */
 public class Car extends Vehicle {
 
-    public Car(String name, int seats) {
+    private int speed;
+    private person driver;
+    
+    public Car(String name, int seats, int s) {
         super(name, seats);
+        speed = s;
+        this.driver = new Driver("Simeon");
+    }
+
+    
+    public int getSpeed(){
+        return speed;
+    }
+    
+    public void setSpeed(int newSpeed){
+        speed = newSpeed;
+    }
+    
+
+    @Override
+    public String run() {
+        return  this.driver.getName() + " is driving the " + this.getVehicleName() ;
     }
 
     @Override
-    public void run() {
-        System.out.println("Car is driving");
+    public String stop() {
+        return this.getVehicleName() + " is braking and stopping";
     }
 
     @Override
-    public void stop() {
-        System.out.println("Braking this car");
-    }
-
-    @Override
-    public void accelerate() {
-        System.out.println("Accelerating this car");
+    public String accelerate() {
+        return this.getVehicleName() + " is accelerating";
     }
     
 }

@@ -13,18 +13,13 @@ public class Start {
     
     public static void main(String[] args){
         plane myPlane = new plane("F16", 10);
-        Car myCar = new Car("Chevy", 5);
+        Car myCar = new Car("Chevy", 5, 30);
         Boat myBoat = new Boat("Boaty McBoatyface", 50);
         
-        myPlane.run();
+        System.out.println(myPlane.run());
         myPlane.stop();
         myPlane.accelerate();
-        myCar.run();
-        myCar.stop();
-        myCar.accelerate();
-        myBoat.run();
-        myBoat.stop();
-        myBoat.accelerate();        
+        
     }
     
 }

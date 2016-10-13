@@ -11,32 +11,38 @@ package vehicle;
  */
 public class plane extends Vehicle {
 
+    private Pilot pilot;
+    
     public plane(String name, int seats) {
         super(name, seats);
+        this.pilot = new Pilot("Joe");
     }
     
     /**
      *A car can be driven
+     * @return action
      */
     @Override
-   public void run(){
-       System.out.println("I am flying");
+   public String run(){
+       return this.pilot.getName() + " is flying " + this.getVehicleName();
    }
    
     /**
      *A car gan go up to 90mph
+     * @return 
      */
     @Override
-   public void accelerate(){
-       System.out.println("I can go up to 90mph");
+   public String accelerate(){
+       return ("I can go up to 90mph");
    }
    
     /**
      *Stopping this car
+     * @return 
      */
     @Override
-   public void stop(){
-       System.out.println("Landing this plane");
+   public String stop(){
+       return ("Landing this plane");
    }
     
 }
